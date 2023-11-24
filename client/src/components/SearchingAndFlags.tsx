@@ -1,5 +1,5 @@
 import { useContext, useState, useEffect, ChangeEvent } from 'react'
-import { DarkModeContext } from '../App'
+import { DarkModeContext } from '../pages/Home'
 import SearchCountry from './SearchCountry'
 import FlagList from './FlagList'
 import axios, { AxiosResponse } from 'axios'

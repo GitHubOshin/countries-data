@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { DarkModeContext } from '../App'
+import { DarkModeContext } from '../pages/Home'
 
 function Header(): JSX.Element {
   const darkmode = useContext(DarkModeContext)

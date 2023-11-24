@@ -1,5 +1,5 @@
 import { useContext, Dispatch, SetStateAction } from 'react'
-import { DarkModeContext } from '../App'
+import { DarkModeContext } from '../pages/Home'
 import { TypeRegions } from '../interfaces/types'
 import { Listbox } from '@headlessui/react'
 
