@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { DarkModeContext } from '../pages/Home'
+import { Link } from 'react-router-dom'
 
 function Header(): JSX.Element {
   const darkmode = useContext(DarkModeContext)
@@ -11,7 +12,9 @@ function Header(): JSX.Element {
           : 'bg-dmTextAndLmElements'
       }`}
     >
-      <h1 className="font-extrabold">Where in the world?</h1>
+      <Link to="/">
+        <h1 className="font-extrabold">Where in the world?</h1>
+      </Link>
 
       <button
         className="flex gap-2 items-center"

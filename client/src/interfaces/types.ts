@@ -9,13 +9,14 @@ export type TypeRegions =
 export interface ICountry {
   name: Name
   tld: string[]
+  borders: string[]
   cca2: string
   ccn3: string
   cca3: string
   independent: boolean
   status: string
   unMember: boolean
-  currencies: Currencies
+  currencies: Record<string, { name: string; symbol: string }>
   idd: Idd
   capital: string[]
   altSpellings: string[]
@@ -47,18 +48,13 @@ export interface Name {
   nativeName: NativeName
 }
 
-export interface NativeName {
-  eng: Eng
-}
-
-export interface Eng {
-  official: string
-  common: string
-}
-
-export interface Currencies {
-  USD: Usd
-}
+export type NativeName = Record<
+  string,
+  {
+    official: string
+    common: string
+  }
+>
 
 export interface Usd {
   name: string
@@ -70,9 +66,7 @@ export interface Idd {
   suffixes: string[]
 }
 
-export interface Languages {
-  eng: string
-}
+export type Languages = Record<string, string>
 
 export interface Translations {
   ara: Ara

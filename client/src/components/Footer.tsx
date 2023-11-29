@@ -1,7 +1,14 @@
+import { useContext } from 'react'
+import { DarkModeContext } from '../pages/Home'
+
 function Footer(): JSX.Element {
+  const darkmode = useContext(DarkModeContext)
+  const bgFooter = darkmode.isDarkMode
+    ? 'bg-darkModeElements text-dmTextAndLmElements'
+    : 'bg-dmTextAndLmElements'
   return (
-    <section className="text-center m-16">
-      Created by OSHIN (Ganjanapas Phothong) & anonymous man
+    <section className={`${bgFooter} h-20 flex items-center justify-center`}>
+      <b> Created by OSHIN (Ganjanapas Phothong) & anonymous man</b>
     </section>
   )
 }

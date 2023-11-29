@@ -1,10 +1,11 @@
+import axios, { AxiosResponse } from 'axios'
+
 import { useContext, useState, useEffect, ChangeEvent } from 'react'
+import { useDebounce } from '../hooks/useDebounce'
 import { DarkModeContext } from '../pages/Home'
 import SearchCountry from './SearchCountry'
 import FlagList from './FlagList'
-import axios, { AxiosResponse } from 'axios'
 import { ICountry, TypeRegions } from '../interfaces/types'
-import { useDebounce } from '../hooks/useDebounce'
 
 function SearchingAndFlags() {
   const { isDarkMode } = useContext(DarkModeContext)
