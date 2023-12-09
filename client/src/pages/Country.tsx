@@ -115,10 +115,10 @@ function Country(): JSX.Element {
 
   return (
     <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
-      <div className="min-w-[350px]">
+      <div className="min-w-[350px] h-screen">
         <Header />
         <section
-          className={`${darkModeClass} flex flex-col items-center  px-20 h-full`}
+          className={`${darkModeClass}  flex flex-col items-center mobile:px-5 desktop:px-20 h-full`}
         >
           <button
             className={`self-start px-10 py-1 shadow-md rounded-md my-[80px] ${
@@ -130,11 +130,13 @@ function Country(): JSX.Element {
           >
             BACK
           </button>
-          <div className="flex mobile:flex-col desktop:flex-row gap-[140px] items-center w-fit">
+          <div className="flex mobile:items-center desktop:items-start mobile:flex-col desktop:flex-row desktop:gap-[140px] mobile:gap-12 w-fit">
             <img
               alt=""
               src={country?.flags?.png}
-              className="min-w-[293px] min-h-[210px] "
+              className="w-[293px] h-[210px]"
+              //
+              // min-w-[293px] min-h-[210px]
             />
             <div className={`${dmText} max-w-[500px]`}>
               <h1 className="font-extrabold text-3xl mb-8">
@@ -174,7 +176,8 @@ function Country(): JSX.Element {
                     detail={Object.values(country?.languages || {}).join(', ')}
                   />
                 </div>
-                <section className="mt-[70px] flex flex-cols gap-2  w-[580px] h-[500px]">
+                {/** mt-[70px]  flex flex-cols gap-2  w-[580px] h-[500px]  */}
+                <section className=" desktop:w-[480px] flex mobile:flex-col desktop:flex-row">
                   <h6 className="">Border Country:</h6>
                   <div className="flex flex-wrap gap-2 ">
                     {country?.borders?.map((border) => {
