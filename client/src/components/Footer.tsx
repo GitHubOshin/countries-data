@@ -8,7 +8,7 @@ function Footer(): JSX.Element {
     : 'bg-dmTextAndLmElements'
   return (
     <section className={`${bgFooter} h-20 flex items-center justify-center`}>
-      <b> Created by OSHIN (Ganjanapas Phothong) & anonymous man</b>
+      <b> Created by OSHIN (Ganjanapas Phothong) & her friend</b>
     </section>
   )
 }
