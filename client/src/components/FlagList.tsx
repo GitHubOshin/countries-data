@@ -46,7 +46,7 @@ function FlagList({
 
   return (
     <section className={darkModeText}>
-      <ul className="flex flex-wrap gap-14 justify-between">
+      <ul className="flex flex-wrap gap-14 desktop:justify-between mobile:justify-center">
         {dataCountries.map((country) => {
           return (
             <li
