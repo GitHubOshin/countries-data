@@ -44,15 +44,17 @@ function SearchCountry(props: SearchCountryProps): JSX.Element {
   console.log(regions)
 
   return (
-    <section className=" flex justify-between">
+    <section className=" flex justify-between mobile:flex-col desktop:flex-row mobile:gap-8">
       <input
-        className={`rounded px-[32px] py-4   desktop:min-w-[480px] ${isDark}`}
+        className={`rounded px-[32px] py-4  shadow-md desktop:min-w-[480px] ${isDark}`}
         placeholder="Search for country..."
         value={searchCountry || ''}
         onChange={handleSetSearchCountry}
       />
 
-      <div className={`${isDark} w-[200px] rounded-md shadow-md`}>
+      <div
+        className={`${isDark} mobile:h-14 mobile:w-[215px] desktop:w-[200px] rounded-md shadow-md`}
+      >
         <Listbox value={filterRegion} onChange={handleOnClickRegion}>
           <Listbox.Button className="flex items-center justify-between  w-full h-full right-0 px-10">
             {filterRegion}
