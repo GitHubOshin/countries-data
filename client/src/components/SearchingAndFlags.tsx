@@ -83,7 +83,7 @@ function SearchingAndFlags() {
 
   return (
     <section
-      className={`px-20 py-12 h-full flex flex-col gap-y-14 ${darkModeClass}`}
+      className={`mobile:px-5 desktop:px-20 py-12 h-full flex flex-col gap-y-14 ${darkModeClass}`}
     >
       <SearchCountry
         searchCountry={searchCountry}
