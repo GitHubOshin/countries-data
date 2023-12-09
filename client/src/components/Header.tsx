@@ -20,7 +20,7 @@ function Header(): JSX.Element {
         className="flex gap-2 items-center"
         onClick={darkmode.toggleDarkMode}
       >
-        <img
+        {/* <img
           className="w-4"
           alt={
             darkmode.isDarkMode
@@ -32,6 +32,7 @@ function Header(): JSX.Element {
               ? '../../public/images/icons/mood-dm.svg'
               : '../../public/images/icons/moon-outline.svg'
           }
+        /> */}
         />
         Dark Mode
       </button>
