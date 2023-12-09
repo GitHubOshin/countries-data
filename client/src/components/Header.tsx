@@ -6,7 +6,7 @@ function Header(): JSX.Element {
   const darkmode = useContext(DarkModeContext)
   return (
     <section
-      className={`px-20 h-[61px] flex justify-between items-center ${
+      className={`mobile:px-5 desktop:px-20 h-[61px] flex justify-between items-center ${
         darkmode.isDarkMode === true
           ? 'bg-darkModeElements text-white'
           : 'bg-dmTextAndLmElements'
