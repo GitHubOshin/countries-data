@@ -58,10 +58,12 @@ function SearchCountry(props: SearchCountryProps): JSX.Element {
         <Listbox value={filterRegion} onChange={handleOnClickRegion}>
           <Listbox.Button className="flex items-center justify-between  w-full h-full right-0 px-10">
             {filterRegion}
+            {/*
             <img
               alt="arrow down"
               src="../../public/images/icons/arrowDown.svg"
             />
+            */}
           </Listbox.Button>
           <Listbox.Options
             className={`${isDark} py-3 rounded-md shadow-md absolute w-[200px] mt-1 `}
