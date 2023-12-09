@@ -20,7 +20,6 @@ function Header(): JSX.Element {
         className="flex gap-2 items-center"
         onClick={darkmode.toggleDarkMode}
       >
-        />
         Dark Mode
       </button>
     </section>
